@@ -34,6 +34,7 @@ module.exports = (
   if (!isServer && !extractCssInitialized) {
     config.plugins.push(
       new ExtractCssChunks({
+        ignoreOrder: true,
         // Options similar to the same options in webpackOptions.output
         // both options are optional
         filename: dev
